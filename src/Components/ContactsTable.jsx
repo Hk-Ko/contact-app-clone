@@ -74,7 +74,7 @@ const ContactTable = () => {
       }
     })
     .map((contact) => {
-      const randomColorIndex = Math.floor(Math.random() * colors.length);
+      const randomColorIndex = Math.floor(Math.random() * colors?.length);
       const randomColor = colors[randomColorIndex];
       const handleClick = () => {
         navigate(`/singleContactInfo/${contact?.id}`);
@@ -114,7 +114,7 @@ const ContactTable = () => {
           <td className="hidden md:table-cell">{contact.email}</td>
           <td className="hidden md:table-cell">{contact.phone}</td>
           <td className="hidden md:table-cell">
-            {contact.address.length > 35
+            {contact?.address?.length > 35
               ? `${contact?.address?.substring(0, 35)} . . .`
               : contact?.address}
             {/* {contact.address} */}
