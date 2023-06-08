@@ -126,13 +126,14 @@ const Favorite = () => {
                     </td>
                     <td className="">{contact.email}</td>
                     <td className="">{contact.phone}</td>
-                    <td className="flex justify-between">
-                      <span>
-                        {contact?.address?.length > 25
-                          ? `${contact?.address?.substring(0, 25)} . . .`
-                          : contact?.address}
-                        {/* {contact.address} */}
-                      </span>
+                    <td className="">
+                      {" "}
+                      {contact?.address?.length > 25
+                        ? `${contact?.address?.substring(0, 25)} . . .`
+                        : contact?.address}
+                      {/* {contact.address} */}
+                    </td>
+                    <td className="">
                       <div className="hidden group-hover/item:block">
                         <div className="flex items-center space-x-5 duration-400 mr-[15px]">
                           <div
